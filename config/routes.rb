@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :users
+
   root 'home#landing'
   get 'home/landing'
 
