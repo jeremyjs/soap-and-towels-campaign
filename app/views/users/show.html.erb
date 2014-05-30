@@ -1,23 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%#= gravatar_for @user %>
+        <%= image_tag @user.avatar_url, :width => '64' %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
 
 <p>
   <strong>Email:</strong>
   <%= @user.email %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
-
-<p>
-  <strong>Avatar url:</strong>
-  <%= @user.avatar_url %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
